@@ -8,6 +8,8 @@ import Student from "./Student";
 import Login from "./Login";
 import LoginSuccessful from "./LoginSuccessful";
 import {Header} from "./Header";
+import APITests from "./APITests";
+import CSSTests from "./CSSTests";
 
 function App() {
   return (
@@ -24,9 +26,10 @@ function App() {
                   <Route path="/student" element={<Student />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/success" element={<LoginSuccessful />} />
+                  <Route path="/apitesting" element={<APITests />} />
+                  <Route path="/csstesting" element={<CSSTests />} />
               </Routes>
           </BrowserRouter>
-
       </header>
     </div>
   );

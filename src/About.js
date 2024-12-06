@@ -1,6 +1,8 @@
 function About() {
-    return (
-        <h1>Find out more about our company here</h1>
+    return (<>
+        <h3>This is a simple React application to test out the basic functionality of React.js.</h3>
+        <h4>Feel free to explore all the links above!</h4>
+        </>
     )
 }
 

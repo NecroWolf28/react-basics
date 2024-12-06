@@ -1,5 +1,21 @@
+ul {
+    background-color: lightcoral;
+    padding: 2%;
+    margin: 0;
+}
+
 ul li{
     display: inline-block;
     list-style-type: none;
     margin-right: 2%;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: floralwhite;
 }

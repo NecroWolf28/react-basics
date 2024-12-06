@@ -1,6 +1,6 @@
 function Home() {
     return (
-        <h1>This is my home component</h1>
+        <h1>Welcome Home!</h1>
     )
 }
 

@@ -34,6 +34,25 @@ function Contact() {
         }
     }
 
+    const postApiData=async()=>{
+        //to post the data to server
+        let data ={
+            //read the value from input
+            "email":"Lydia@apirequest.in",
+            "password":"afd"
+        }
+        let res = await fetch("https://www.apirequest.in/user/api/login",
+            {
+                method:"POST",
+                body:JSON.stringify(data),
+                headers:{"content-type":'application/json'}
+            });
+        let json = await res.json();
+        //updating the server response  to the  state varibles
+        console.log(json);
+
+    }
+
 
     return (
         <>
@@ -41,13 +60,13 @@ function Contact() {
             <h3>{myname}</h3>
             <div>{name}</div>
             {
-                userList.map((obj,index) =>{
+                userList.map((obj, index) => {
                     return (<div key={index}>{obj.name} {obj.mobile}</div>)
                 })
             }
-            <button onClick={()=>getApiData()}>Get Data</button>
+            <button onClick={() => getApiData()}>Get Data</button>
             {
-                serverUserList && serverUserList.map((obj,index)=>{
+                serverUserList && serverUserList.map((obj, index) => {
                     return (
                         <div key={index}>{obj.title}-- {obj.year}</div>
                     )
@@ -61,6 +80,9 @@ function Contact() {
             </div>
             <div>
                 <input type="button" onClick={() => printval()} value="Click"/>
+            </div>
+            <div>
+                <input type="button" onClick={() => postApiData()} value="Post API Data"/>
             </div>
         </>
     )
